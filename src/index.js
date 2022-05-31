@@ -12,6 +12,7 @@ import Switcher from './components/Switcher';
 import Tag from './components/Tag';
 import TagsContainer from './components/Tag/TagsContainer';
 import Toggle from './components/Toggle';
+import Tooltip from './components/Tooltip';
 
 export {
 	ExpandableLabel,
@@ -27,4 +28,5 @@ export {
 	Tag,
 	TagsContainer,
 	Toggle,
+	Tooltip,
 };

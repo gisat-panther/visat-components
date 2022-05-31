@@ -40,6 +40,7 @@ export default {
 		'react-icons/md',
 		'react',
 		'react-slider',
+		'react-tooltip',
 		/@babel\/runtime/,
 	],
 	plugins: [
