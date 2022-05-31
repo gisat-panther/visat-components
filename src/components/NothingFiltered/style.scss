@@ -1,0 +1,30 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-NothingFiltered {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: m(5);
+
+	@include maxWidth('medium') {
+		padding-top: m(2);
+	}
+}
+
+.ptr-NothingFiltered-title {
+	font-size: $a3;
+	font-weight: bold;
+	color: var(--base50);
+
+	@include maxWidth('small') {
+		font-size: $b3;
+	}
+}
+
+.ptr-NothingFiltered-description {
+	color: var(--base50);
+	margin-bottom: m(1);
+}

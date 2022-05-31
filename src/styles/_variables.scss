@@ -1,0 +1,156 @@
+@import '~@gisatcz/ptr-core/lib/styles/_variables';
+
+// Breakpoints
+$width-breakpoints: (
+	x-small: 575.98px,
+	small: 767.98px,
+	medium: 991.98px,
+	large: 1199.98px,
+	x-large: 1399.98px,
+	xx-large: 1599.98px
+);
+
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin maxWidth($breakpoint) {
+	// If the key exists in the map
+	@if map-has-key($width-breakpoints, $breakpoint) {
+		// Prints a media query based on the value
+		@media (max-width: map-get($width-breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($width-breakpoints)}.";
+	}
+}
+
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin minWidth($breakpoint) {
+	// If the key exists in the map
+	@if map-has-key($width-breakpoints, $breakpoint) {
+		// Prints a media query based on the value
+		@media (min-width: map-get($width-breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($width-breakpoints)}.";
+	}
+}
+
+// Colors
+@function hexToRGB($color) {
+	@return red($color), green($color), blue($color);
+}
+
+$lightAccent0: hsl(40, 100%, 99.41%);
+$lightAccent0rgb: 255, 254, 252;
+$lightAccent05: hsl(160, 47.37%, 96.27%);
+$lightAccent10: hsl(164.21, 51.35%, 92.75%);
+$lightAccent15: hsl(166.45, 56.36%, 89.22%);
+$lightAccent20: hsl(166.83, 56.16%, 85.69%);
+$lightAccent25: hsl(168.24, 56.04%, 82.16%);
+$lightAccent30: hsl(169.6, 56.39%, 73.92%);
+$lightAccent35: hsl(169.8, 56.82%, 65.49%);
+$lightAccent40: hsl(170.73, 56.16%, 57.06%);
+$lightAccent45: hsl(170.68, 59.68%, 48.63%);
+$lightAccent50: hsl(170.93, 83.5%, 40.39%);
+$lightAccent50rgb: 17, 189, 163;
+$lightAccent55: hsl(170.74, 83.51%, 38.04%);
+$lightAccent60: hsl(170.53, 83.52%, 35.69%);
+$lightAccent65: hsl(171, 82.35%, 33.33%);
+$lightAccent70: hsl(170.77, 82.28%, 30.98%);
+$lightAccent75: hsl(170.5, 82.19%, 28.63%);
+$lightAccent80: hsl(170, 81.36%, 23.14%);
+$lightAccent85: hsl(169.17, 80%, 17.65%);
+$lightAccent90: hsl(168.51, 74.6%, 12.35%);
+$lightAccent95: hsl(164.35, 65.71%, 6.86%);
+$lightAccent100: hsl(45, 100%, 0.78%);
+$lightAccent100rgb: 4, 3, 0;
+
+$darkAccent0: hsl(45, 100%, 0.78%);
+$darkAccent0rgb: 4, 3, 0;
+$darkAccent05: hsl(164.35, 65.71%, 6.86%);
+$darkAccent10: hsl(168.51, 74.6%, 12.35%);
+$darkAccent15: hsl(169.17, 80%, 17.65%);
+$darkAccent20: hsl(170, 81.36%, 23.14%);
+$darkAccent25: hsl(170.5, 82.19%, 28.63%);
+$darkAccent30: hsl(170.77, 82.28%, 30.98%);
+$darkAccent35: hsl(171, 82.35%, 33.33%);
+$darkAccent40: hsl(170.53, 83.52%, 35.69%);
+$darkAccent45: hsl(170.74, 83.51%, 38.04%);
+$darkAccent50: hsl(170.93, 83.5%, 40.39%);
+$darkAccent50rgb: 17, 189, 163;
+$darkAccent55: hsl(170.68, 59.68%, 48.63%);
+$darkAccent60: hsl(170.73, 56.16%, 57.06%);
+$darkAccent65: hsl(169.8, 56.82%, 65.49%);
+$darkAccent70: hsl(169.6, 56.39%, 73.92%);
+$darkAccent75: hsl(168.24, 56.04%, 82.16%);
+$darkAccent80: hsl(166.83, 56.16%, 85.69%);
+$darkAccent85: hsl(166.45, 56.36%, 89.22%);
+$darkAccent90: hsl(164.21, 51.35%, 92.75%);
+$darkAccent95: hsl(160, 47.37%, 96.27%);
+$darkAccent100: hsl(40, 100%, 99.41%);
+$darkAccent100rgb: 255, 254, 252;
+
+// layout
+$headerHeight: 3.25rem;
+$headerHeight_x-small: 2.75rem;
+
+// colors
+$baseTextColor: var(--base85);
+$secondaryTextColor: var(--base65);
+$accentedTextColor: var(--accent55);
+$accentedDarkTextColor: var(--accent75);
+$disabledTextColor: var(--base30);
+
+$baseIconColor: var(--base80);
+$secondaryIconColor: var(--base60);
+$accentedIconColor: var(--accent55);
+$disabledIconColor: var(--base25);
+
+$baseBorderColor: var(--base75);
+$secondaryBorderColor: var(--base55);
+$accentedBorderColor: var(--accent45);
+$disabledBorderColor: var(--base25);
+
+$disabledBackgroundColor: var(--base10);
+$accentedBackgroundLightColor: var(--accent10);
+$accentedBackgroundDarkColor: var(--accent25);
+
+$placeholderColor: var(--base20);
+$placeholderLightColor: var(--base10);
+
+$hoverBackgroundColor: rgba(var(--base50rgb), 0.12);
+$hoverBackgroundColor-dark: rgba(var(--base50rgb), 0.25);
+
+// font size
+$a0: 0.625rem;
+$a1: 0.875rem;
+$a2: 1.5rem;
+$a3: 2.5rem;
+$a4: 4rem;
+
+$b1: 0.75rem;
+$b2: 1.25rem;
+$b3: 2rem;
+$b4: 3rem;
+
+/* Elements */
+$floatingElementShadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+
+// icons
+$iconToolSize: 2.25rem;
+$iconToolSize_medium: 2rem;
+
+$iconSize: 1.25rem;
+$mediumIconSize: 1.125rem;
+$smallIconSize: 1rem;

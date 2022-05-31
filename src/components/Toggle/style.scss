@@ -1,0 +1,54 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+$width: 1.7rem;
+$height: 1.1rem;
+$borderWidth: 0.1rem;
+
+.ptr-Toggle {
+	position: relative;
+	width: $width;
+	height: $height;
+	border-radius: math.div($height, 2);
+	cursor: pointer;
+	border: $borderWidth solid $secondaryBorderColor;
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.ptr-Toggle-bullet {
+	background: $secondaryIconColor;
+	width: $height - $borderWidth * 4;
+	height: $height - $borderWidth * 4;
+	border-radius: math.div($height, 2);
+	position: absolute;
+	left: $borderWidth;
+	top: $borderWidth;
+	transition: left 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+// on
+.ptr-Toggle.is-on {
+	background: $accentedBackgroundLightColor;
+	border: $borderWidth solid $accentedBorderColor;
+}
+
+.ptr-Toggle.is-on .ptr-Toggle-bullet {
+	left: $width - $height + $borderWidth;
+	background: $accentedIconColor;
+}
+
+// disabled
+.ptr-Toggle.is-disabled {
+	border-color: $disabledBorderColor;
+	pointer-events: none;
+}
+.ptr-Toggle.is-on.is-disabled {
+	border-color: var(--accent25);
+}
+
+.ptr-Toggle.is-disabled .ptr-Toggle-bullet {
+	background: $disabledIconColor;
+}
+.ptr-Toggle.is-on.is-disabled .ptr-Toggle-bullet {
+	background: var(--accent25);
+}
