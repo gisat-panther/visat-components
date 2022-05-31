@@ -36,6 +36,7 @@ export default {
 		'prop-types',
 		'react-modal',
 		'react-icons',
+		'react-icons/hi',
 		'react-icons/md',
 		'react',
 		'react-slider',

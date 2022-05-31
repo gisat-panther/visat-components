@@ -76,6 +76,7 @@
 		"build:babel:lib:es": "cross-env BABEL_ENV=production babel src -d lib",
 		"copy:stylesheets": "node ./build/copy-stylesheets.js",
 		"copy:assets": "node ./build/copy-assets.js",
+		"format": "prettier --write .",
 		"lint": "eslint .",
 		"lintFix": "eslint . --fix"
 	}

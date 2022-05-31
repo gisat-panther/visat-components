@@ -31,6 +31,7 @@ import {
 	MdOutlineThumbUpOffAlt as ThumbUp,
 	MdTune as Tune,
 } from 'react-icons/md';
+import {HiCursorClick as Selection} from 'react-icons/hi';
 import {Icon as PantherIcon} from '@gisatcz/ptr-atoms';
 import './style.scss';
 
@@ -103,6 +104,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-read-more':
 			i = <ReadMore />;
+			break;
+		case 'ri-selection':
+			i = <Selection />;
 			break;
 		case 'ri-share':
 			i = <Share />;
