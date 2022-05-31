@@ -23,6 +23,7 @@ const ModalWindow = ({isOpen, onClose, className, children}) => {
 				className="ptr-Modal-closeButton"
 				icon="ri-close"
 				onClick={onClose}
+				tooltip={{text: 'Close', position: 'left', id: 'ModalTooltip'}}
 			/>
 			<div className="ptr-Modal-content">
 				<div>{children}</div>

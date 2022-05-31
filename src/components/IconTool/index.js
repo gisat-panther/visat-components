@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Icon from '../Icon';
+import Tooltip from '../Tooltip';
 import './style.scss';
 
 const IconTool = ({
@@ -46,9 +47,9 @@ const IconTool = ({
 			data-for={tooltip?.id}
 		>
 			<Icon icon={icon} />
-			{tooltip?.component && !disabled
-				? React.createElement(tooltip.component, {
-						...tooltip.component.props,
+			{tooltip && !disabled
+				? React.createElement(tooltip.component || Tooltip, {
+						...tooltip.component?.props,
 						id: tooltip.id,
 						place: tooltip.position || 'top',
 						effect: 'solid',
