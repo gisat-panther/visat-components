@@ -1,0 +1,72 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-Switcher {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ptr-Switcher-title {
+  display: flex;
+  align-items: center;
+  color: $baseIconColor;
+}
+
+.ptr-Switcher .ptr-icon .line {
+  fill: $baseIconColor;
+}
+
+.ptr-Switcher .ptr-react-icon,
+.ptr-Switcher .ptr-icon, {
+  margin-right: .35rem;
+  width: $smallIconSize;
+  height: $smallIconSize;
+}
+
+.ptr-Switcher-name {
+  color: $baseTextColor;
+  font-size: $a1;
+}
+
+.ptr-Switcher-toggle{
+  margin-left: .5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+// interactive
+.ptr-Switcher.is-interactive {
+  cursor: pointer;
+}
+
+// active
+.ptr-Switcher.is-active .ptr-Switcher-title {
+  color: $accentedIconColor;
+}
+
+.ptr-Switcher.is-active .ptr-Switcher-name {
+  color: $accentedTextColor;
+  font-weight: 500;
+}
+
+.ptr-Switcher.is-active .ptr-icon .line {
+  fill: $accentedIconColor;
+}
+
+// disabled
+.ptr-Switcher.is-disabled {
+  pointer-events: none;
+}
+
+.ptr-Switcher.is-disabled .ptr-Switcher-title {
+  color: $disabledIconColor;
+}
+
+.ptr-Switcher.is-disabled .ptr-icon .line {
+  fill: $disabledIconColor;
+}
+
+.ptr-Switcher.is-disabled .ptr-Switcher-name {
+  color: $disabledTextColor;
+}

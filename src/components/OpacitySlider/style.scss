@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+
+.ptr-OpacitySlider {
+  width: 4rem;
+  height: .2rem;
+  border-radius: .1rem;
+  margin-right: .15rem;
+}
+
+.ptr-OpacitySlider-thumb {
+  margin-top: -0.4rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: .85rem;
+  background: var(--base0);
+  border: .15rem solid $accentedIconColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $a0;
+  font-weight: 500;
+  cursor: pointer;
+  padding-top: .1rem;
+}
+
+.ptr-OpacitySlider-thumb:hover,
+.ptr-OpacitySlider-thumb:focus {
+  background: $accentedBackgroundDarkColor;
+}
+
+.ptr-OpacitySlider-track {
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+}
+
+.ptr-OpacitySlider-track-0 {
+  background: $accentedIconColor;
+}
+
+.ptr-OpacitySlider-track-1 {
+  background: var(--base30);
+}
