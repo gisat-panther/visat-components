@@ -46,6 +46,15 @@ const IconTool = ({
 			data-for={tooltip?.id}
 		>
 			<Icon icon={icon} />
+			{tooltip?.component && !disabled
+				? React.createElement(tooltip.component, {
+						...tooltip.component.props,
+						id: tooltip.id,
+						place: tooltip.position || 'top',
+						effect: 'solid',
+						delayShow: tooltip.delayShow || 1000,
+				  })
+				: null}
 		</div>
 	);
 };
