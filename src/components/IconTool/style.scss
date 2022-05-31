@@ -3,82 +3,81 @@
 
 /* Tool */
 .ptr-IconTool {
-  position: relative;
-  height: $iconToolSize;
-  width: $iconToolSize;
-  border-radius: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: $secondaryIconColor;
+	position: relative;
+	height: $iconToolSize;
+	width: $iconToolSize;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: $secondaryIconColor;
 }
 
 .ptr-IconTool:hover {
-  color: $baseIconColor;
-  background: $hoverBackgroundColor;
+	color: $baseIconColor;
+	background: $hoverBackgroundColor;
 }
 
 .ptr-dark .ptr-IconTool:hover {
-  background: $hoverBackgroundColor-dark;
+	background: $hoverBackgroundColor-dark;
 }
 
 // small
 .ptr-IconTool.is-small {
-  height: 1.75rem;
-  width: 1.75rem;
+	height: 1.75rem;
+	width: 1.75rem;
 }
 
 .ptr-IconTool.is-small .ptr-icon,
 .ptr-IconTool.is-small .ptr-react-icon,
 .ptr-IconTool.is-medium .ptr-icon,
 .ptr-IconTool.is-medium .ptr-react-icon {
-  width: 1.125rem;
-  height: 1.125rem;
+	width: 1.125rem;
+	height: 1.125rem;
 }
 
 // medium
 .ptr-IconTool.is-medium {
-  height: $iconToolSize_medium;
-  width: $iconToolSize_medium;
+	height: $iconToolSize_medium;
+	width: $iconToolSize_medium;
 }
 
 // active
 .ptr-IconTool.is-active {
-  color: $accentedIconColor;
+	color: $accentedIconColor;
 }
 
 // disabled
 .ptr-IconTool.is-disabled {
-  pointer-events: none;
-  color: $disabledIconColor;
+	pointer-events: none;
+	color: $disabledIconColor;
 }
 
 // floating
 .ptr-IconTool.is-floating {
-  position: relative;
-  z-index: 2;
-  background: var(--base05);
-  box-shadow: $floatingElementShadow;
+	position: relative;
+	z-index: 2;
+	background: var(--base05);
+	box-shadow: $floatingElementShadow;
 }
 .ptr-dark .ptr-IconTool.is-floating {
-  border: .05rem solid var(--base30);
+	border: 0.05rem solid var(--base30);
 }
 .ptr-IconTool.is-floating:hover {
-  background: var(--base05);
+	background: var(--base05);
 }
 .ptr-IconTool.is-floating:hover:after {
-  content: "";
-  border-radius: 1.5rem;
-  @include positionFill();
-  background: $hoverBackgroundColor;
+	content: '';
+	border-radius: 1.5rem;
+	@include positionFill();
+	background: $hoverBackgroundColor;
 }
 .ptr-dark .ptr-IconTool.is-floating:hover:after {
-  background: $hoverBackgroundColor-dark;
+	background: $hoverBackgroundColor-dark;
 }
 
 // rectangular
 .ptr-IconTool.is-rectangular {
-  border-radius: .25rem;
+	border-radius: 0.25rem;
 }
-

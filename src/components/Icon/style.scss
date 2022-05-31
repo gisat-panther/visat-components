@@ -3,10 +3,10 @@
 
 .ptr-icon,
 .ptr-react-icon {
-  width: $iconSize;
-  height: $iconSize;
+	width: $iconSize;
+	height: $iconSize;
 }
 
 .ptr-react-icon.clockwise270 {
-  transform: rotate(270deg);
+	transform: rotate(270deg);
 }
