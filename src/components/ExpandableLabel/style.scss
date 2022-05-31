@@ -1,113 +1,111 @@
 @use 'sass:math';
 @import '../../styles/variables';
 
-$ExpandableLabelBorderRadius: .25rem;
+$ExpandableLabelBorderRadius: 0.25rem;
 $ExpandableLabelRoundedBorderRadius: 1.5rem;
 
 // container
 .ptr-ExpandableLabelsContainer {
-  display: block;
+	display: block;
 }
 
 .ptr-ExpandableLabelsContainer > .ptr-ExpandableLabel {
-  float: left;
-  margin: 0 .5rem .5rem 0;
+	float: left;
+	margin: 0 0.5rem 0.5rem 0;
 }
 
 .ptr-ExpandableLabelsContainer.is-right > .ptr-ExpandableLabel {
-  margin: 0 0 .5rem .5rem;
+	margin: 0 0 0.5rem 0.5rem;
 }
 
 // label
 .ptr-ExpandableLabel {
-  background: var(--base05);
-  border-radius: $ExpandableLabelBorderRadius;
-  position: relative;
+	background: var(--base05);
+	border-radius: $ExpandableLabelBorderRadius;
+	position: relative;
 }
 
 .ptr-ExpandableLabel.is-rounded {
-  border-radius: $ExpandableLabelRoundedBorderRadius;
+	border-radius: $ExpandableLabelRoundedBorderRadius;
 }
 
 .ptr-ExpandableLabel.is-floating {
-  box-shadow: $floatingElementShadow;
+	box-shadow: $floatingElementShadow;
 }
-
 
 // Header
 .ptr-ExpandableLabelHeader {
-  display: flex;
-  width: 100%;
-  min-height: 2rem;
-  border-radius: $ExpandableLabelBorderRadius;
+	display: flex;
+	width: 100%;
+	min-height: 2rem;
+	border-radius: $ExpandableLabelBorderRadius;
 }
 
 .ptr-dark .ptr-ExpandableLabelHeader {
-  border: 1px solid var(--base30);
+	border: 1px solid var(--base30);
 }
 
 .ptr-ExpandableLabelHeader.is-interactive {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .ptr-ExpandableLabelHeader.is-rounded {
-  border-radius: $ExpandableLabelRoundedBorderRadius;
+	border-radius: $ExpandableLabelRoundedBorderRadius;
 }
 
 .ptr-ExpandableLabelHeader-content {
-  flex: 1;
+	flex: 1;
 }
 
 .ptr-ExpandableLabelHeader-controlButton.ptr-IconTool {
-  height: 100%;
-  min-height: 2rem;
-  display: flex;
-  align-items: center;
-  padding: 0 .15rem;
-  border-radius: $ExpandableLabelBorderRadius;
+	height: 100%;
+	min-height: 2rem;
+	display: flex;
+	align-items: center;
+	padding: 0 0.15rem;
+	border-radius: $ExpandableLabelBorderRadius;
 }
 
 .ptr-ExpandableLabelHeader.is-rounded .ptr-ExpandableLabelHeader-controlButton.ptr-IconTool {
-  border-radius: $ExpandableLabelRoundedBorderRadius;
+	border-radius: $ExpandableLabelRoundedBorderRadius;
 }
-
 
 // Body
 .ptr-ExpandableLabelBody {
-  min-width: 10rem;
-  margin-top: m(math.div(1,3));
-  height: 0;
-  overflow-y: hidden;
-  transition: height .3s ease-in-out;
-  border-radius: $ExpandableLabelBorderRadius;
-  background: var(--base05);
-  position: absolute;
-  z-index: 2;
+	min-width: 10rem;
+	margin-top: m(math.div(1, 3));
+	height: 0;
+	overflow-y: hidden;
+	transition: height 0.3s ease-in-out;
+	border-radius: $ExpandableLabelBorderRadius;
+	background: var(--base05);
+	position: absolute;
+	z-index: 2;
 }
 
 .ptr-ExpandableLabel.is-floating .ptr-ExpandableLabelBody {
-  box-shadow: $floatingElementShadow;
+	box-shadow: $floatingElementShadow;
 }
 
 .ptr-ExpandableLabelBody > div {
-  width: 100%;
+	width: 100%;
 }
 
 // Expanded
-.ptr-ExpandableLabelHeader.is-expanded .ptr-ExpandableLabelHeader-controlButton  .ptr-icon {
-  transform: rotate(90deg);
+.ptr-ExpandableLabelHeader.is-expanded .ptr-ExpandableLabelHeader-controlButton .ptr-icon {
+	transform: rotate(90deg);
 }
 
 .ptr-ExpandableLabelBody.is-expanded {
-  display: flex;
-  height: 10rem;
+	display: flex;
+	height: 10rem;
 }
 
-.ptr-dark .ptr-ExpandableLabelBody.is-expanded  {
-  border: 1px solid var(--base30);
+.ptr-dark .ptr-ExpandableLabelBody.is-expanded {
+	border: 1px solid var(--base30);
 }
 
 .ptr-ExpandableLabelBody > div {
-  height: 10rem;
-  overflow-y: auto;
+	height: 10rem;
+	overflow-y: auto;
 }
