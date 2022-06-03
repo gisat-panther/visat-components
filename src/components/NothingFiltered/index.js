@@ -3,19 +3,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const NothingFiltered = () => {
+const NothingFiltered = ({message}) => {
 	return (
 		<div className="ptr-NothingFiltered">
 			<div className="ptr-NothingFiltered-title">Nothing filtered</div>
 			<div className="ptr-NothingFiltered-description">
-				None of the datasets match filtering parameters
+				{message || 'None of the datasets match filtering parameters'}
 			</div>
 		</div>
 	);
 };
 
 NothingFiltered.propTypes = {
-	onCtaClick: PropTypes.func,
+	message: PropTypes.string,
 };
 
 export default NothingFiltered;
