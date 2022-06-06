@@ -1,3 +1,14 @@
+# v0.3.3 (Mon Jun 06 2022)
+
+#### 🐾 Patch
+
+
+#### Authors: 1
+
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.3.2 (Mon Jun 06 2022)
 
 #### 🐾 Patch
