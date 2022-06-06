@@ -2,7 +2,6 @@
 
 #### 🚀 Enhancement
 
-
 #### Authors: 1
 
 - Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
