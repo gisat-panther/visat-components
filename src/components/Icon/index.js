@@ -23,6 +23,7 @@ import {
 	MdOutlineAccountCircle as Account,
 	MdLeaderboard as BarChart,
 	MdLocationSearching as LocationSearch,
+	MdLocationCity as City,
 	MdDashboard as Dashboard,
 	MdDashboardCustomize as AddMap,
 	MdReadMore as ReadMore,
@@ -66,6 +67,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-chevron-right':
 			i = <ChevronRight />;
+			break;
+		case 'ri-city':
+			i = <City />;
 			break;
 		case 'ri-close':
 			i = <Close />;
