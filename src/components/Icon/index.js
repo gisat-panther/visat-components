@@ -32,6 +32,13 @@ import {
 	MdOutlineThumbUpOffAlt as ThumbUp,
 	MdTune as Tune,
 } from 'react-icons/md';
+import {
+	SiZenodo as Zenodo,
+	SiFacebook as Facebook,
+	SiTwitter as Twitter,
+	SiLinkedin as Linkedin,
+	SiResearchgate as Researchgate,
+} from 'react-icons/si';
 import {HiCursorClick as Selection} from 'react-icons/hi';
 import {Icon as PantherIcon} from '@gisatcz/ptr-atoms';
 import './style.scss';
@@ -131,6 +138,21 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-user':
 			i = <Account />;
+			break;
+		case 'ri-facebook':
+			i = <Facebook />;
+			break;
+		case 'ri-twitter':
+			i = <Twitter />;
+			break;
+		case 'ri-linkedin':
+			i = <Linkedin />;
+			break;
+		case 'ri-researchgate':
+			i = <Researchgate />;
+			break;
+		case 'ri-zenodo':
+			i = <Zenodo />;
 			break;
 	}
 
