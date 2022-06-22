@@ -38,6 +38,8 @@ export default {
 		'react-icons',
 		'react-icons/hi',
 		'react-icons/si',
+		'react-icons/ai',
+		'react-icons/go',
 		'react-icons/md',
 		'react',
 		'react-slider',
