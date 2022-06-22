@@ -39,9 +39,7 @@ import {
 	SiLinkedin as Linkedin,
 	SiResearchgate as Researchgate,
 } from 'react-icons/si';
-import {
-	AiFillHome as Home,
-} from 'react-icons/ai';
+import {AiFillHome as Home} from 'react-icons/ai';
 import {
 	GoPrimitiveDot as Dot,
 	GoPrimitiveSquare as Square,
@@ -169,7 +167,7 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-square':
 			i = <Square />;
-		break;
+			break;
 	}
 
 	return (
