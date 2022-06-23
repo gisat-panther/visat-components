@@ -1,3 +1,4 @@
+import path from 'path';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
@@ -55,7 +56,7 @@ export default {
 			include: 'node_modules/**',
 		}),
 		postcss({
-			extract: true,
+			extract: path.resolve(Paths.DIST + '/style.css'),
 		}),
 		filesize(),
 	],
