@@ -1,3 +1,16 @@
+# v0.5.0 (Thu Jun 23 2022)
+
+#### 🚀 Enhancement
+
+- icons for navigation appStory [#13](https://github.com/gisat-panther/visat-components/pull/13) ([@KrystofVavra](https://github.com/KrystofVavra) [@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 2
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.4.0 (Fri Jun 10 2022)
 
 #### 🚀 Enhancement
