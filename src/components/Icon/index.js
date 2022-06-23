@@ -39,6 +39,11 @@ import {
 	SiLinkedin as Linkedin,
 	SiResearchgate as Researchgate,
 } from 'react-icons/si';
+import {AiFillHome as Home} from 'react-icons/ai';
+import {
+	GoPrimitiveDot as Dot,
+	GoPrimitiveSquare as Square,
+} from 'react-icons/go';
 import {HiCursorClick as Selection} from 'react-icons/hi';
 import {Icon as PantherIcon} from '@gisatcz/ptr-atoms';
 import './style.scss';
@@ -153,6 +158,15 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-zenodo':
 			i = <Zenodo />;
+			break;
+		case 'ri-home':
+			i = <Home />;
+			break;
+		case 'ri-dot':
+			i = <Dot />;
+			break;
+		case 'ri-square':
+			i = <Square />;
 			break;
 	}
 
