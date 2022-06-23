@@ -11,6 +11,7 @@
 	"homepage": "https://github.com/gisat-panther/visat-components",
 	"prettier": "@gisatcz/prettier-config",
 	"sideEffects": false,
+	"style": "dist/style.css",
 	"main": "dist/index.js",
 	"module": "lib/index.js",
 	"files": [
