@@ -1,3 +1,15 @@
+# v0.5.1 (Thu Jun 23 2022)
+
+#### 🐾 Patch
+
+- Export package style [#14](https://github.com/gisat-panther/visat-components/pull/14) ([@vdubr](https://github.com/vdubr))
+
+#### Authors: 1
+
+- Vojtěch Dubrovský ([@vdubr](https://github.com/vdubr))
+
+---
+
 # v0.5.0 (Thu Jun 23 2022)
 
 #### 🚀 Enhancement
