@@ -1,3 +1,15 @@
+# v0.5.2 (Thu Jul 07 2022)
+
+#### 🐾 Patch
+
+- upgrade dependencies [#15](https://github.com/gisat-panther/visat-components/pull/15) ([@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 1
+
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.5.1 (Thu Jun 23 2022)
 
 #### 🐾 Patch
