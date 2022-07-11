@@ -1,3 +1,15 @@
+# v0.6.0 (Mon Jul 11 2022)
+
+#### 🚀 Enhancement
+
+- add height variables [#16](https://github.com/gisat-panther/visat-components/pull/16) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.5.2 (Thu Jul 07 2022)
 
 #### 🐾 Patch
