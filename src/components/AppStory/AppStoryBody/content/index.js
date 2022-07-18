@@ -1,5 +1,3 @@
-import React from 'react';
-import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import {Children, cloneElement, useState} from 'react';

@@ -24,5 +24,10 @@
 		"node": true,
 		"es6": true
 	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
 	"ignorePatterns": ["build/*", "node_modules/*", "package-lock.json"]
 }
