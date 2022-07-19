@@ -1,3 +1,16 @@
+# v0.7.0 (Tue Jul 19 2022)
+
+#### 🚀 Enhancement
+
+- Feature/story [#17](https://github.com/gisat-panther/visat-components/pull/17) ([@KrystofVavra](https://github.com/KrystofVavra) [@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 2
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.6.0 (Mon Jul 11 2022)
 
 #### 🚀 Enhancement
