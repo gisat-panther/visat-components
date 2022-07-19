@@ -23,7 +23,6 @@
 .ptr-AppStorySubheadline.is-intro {
 	font-size: $b3;
 	color: white;
-	text-shadow: 2px 2px black;
 	margin: 0.5rem;
 	letter-spacing: 0.1rem;
 	@include minWidth('xxx-large') {

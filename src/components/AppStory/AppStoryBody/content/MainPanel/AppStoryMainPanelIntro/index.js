@@ -12,7 +12,7 @@ const AppStoryMainPanelIntro = ({className, children, backgroundImage}) => {
 				backgroundImage: `url(${backgroundImage})`,
 			}}
 		>
-			{children}
+			<div className="ptr-AppStoryMainPanelIntro-overlay">{children}</div>
 		</div>
 	);
 };

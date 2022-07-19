@@ -4,7 +4,6 @@
 .ptr-AppStoryHeadline.is-intro {
 	font-size: $a4;
 	color: white;
-	text-shadow: 2px 2px black;
 	margin: 0;
 	letter-spacing: 0.1rem;
 	@include minWidth('xxx-large') {
