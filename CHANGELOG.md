@@ -1,3 +1,15 @@
+# v0.7.1 (Tue Jul 19 2022)
+
+#### 🐾 Patch
+
+- Resolve: React is not defined [#18](https://github.com/gisat-panther/visat-components/pull/18) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.7.0 (Tue Jul 19 2022)
 
 #### 🚀 Enhancement
