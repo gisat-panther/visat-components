@@ -3,6 +3,7 @@ import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
+// import alias from '@rollup/plugin-alias';
 
 const env = process.env.NODE_ENV;
 const pkg = require('./package.json');
@@ -59,5 +60,13 @@ export default {
 			extract: path.resolve(Paths.DIST + '/style.css'),
 		}),
 		filesize(),
+		// alias({
+		// 	entries: [
+		// 		{
+		// 			find: '@gisatcz/ptr-atoms',
+		// 			replacement: 'C:/Users/PavelVlach/WebstormProjects/ptr-atoms',
+		// 		},
+		// 	],
+		// }),
 	],
 };
