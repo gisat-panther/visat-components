@@ -1,3 +1,15 @@
+# v0.8.0 (Tue Jul 19 2022)
+
+#### 🚀 Enhancement
+
+- AppStory: main panel introduction style [#19](https://github.com/gisat-panther/visat-components/pull/19) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.7.1 (Tue Jul 19 2022)
 
 #### 🐾 Patch
