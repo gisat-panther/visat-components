@@ -1,3 +1,15 @@
+# v0.8.1 (Fri Jul 22 2022)
+
+#### 🐾 Patch
+
+- AppStory: fix scrolling between sections [#20](https://github.com/gisat-panther/visat-components/pull/20) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.8.0 (Tue Jul 19 2022)
 
 #### 🚀 Enhancement
