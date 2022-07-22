@@ -11,26 +11,31 @@ const AppStoryContent = ({className, children}) => {
 
 	const onScroll = event => {
 		let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
+		let userReachedBottom =
+			sidePanelRef.current.offsetHeight + sidePanelRef.current.scrollTop >=
+			sidePanelRef.current.scrollHeight - 10;
+
 		sidePanelNodes.forEach((node, index) => {
 			node.offsetTop - 100 <= event.target.scrollTop &&
 			node.offsetTop + node.offsetHeight - 100 > event.target.scrollTop
-				? jumpSection == null
-					? sidePanelRef.current.offsetHeight +
-							sidePanelRef.current.scrollTop >=
-					  sidePanelRef.current.scrollHeight - 10
-						? setActiveSection(sidePanelNodes.length - 1)
+				? // user is located in this section (node)
+				  jumpSection == null
+					? // user is scrolling
+					  userReachedBottom
+						? // user reached the bottom section
+						  setActiveSection(sidePanelNodes.length - 1)
 						: setActiveSection(index)
-					: (setActiveSection(jumpSection),
-					  sidePanelRef.current.offsetHeight +
-							sidePanelRef.current.scrollTop >=
-							sidePanelRef.current.scrollHeight - 10 &&
-					  jumpSection == sidePanelNodes.length - 1
-							? setJumpSection(null)
+					: // user jumped to a section
+					  (setActiveSection(jumpSection),
+					  userReachedBottom && jumpSection == sidePanelNodes.length - 1
+							? // user jumped to the bottom section and reached it
+							  setJumpSection(null)
 							: sidePanelNodes[jumpSection].offsetTop >
 									event.target.scrollTop - 5 &&
 							  sidePanelNodes[jumpSection].offsetTop <
 									event.target.scrollTop + 5
-							? setJumpSection(null)
+							? // user reached the jumped section
+							  setJumpSection(null)
 							: null)
 				: null;
 		});
