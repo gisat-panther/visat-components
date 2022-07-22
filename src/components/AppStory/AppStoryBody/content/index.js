@@ -15,9 +15,21 @@ const AppStoryContent = ({className, children}) => {
 			node.offsetTop - 100 <= event.target.scrollTop &&
 			node.offsetTop + node.offsetHeight - 100 > event.target.scrollTop
 				? jumpSection == null
-					? setActiveSection(index)
+					? sidePanelRef.current.offsetHeight +
+							sidePanelRef.current.scrollTop >=
+					  sidePanelRef.current.scrollHeight - 10
+						? setActiveSection(sidePanelNodes.length - 1)
+						: setActiveSection(index)
 					: (setActiveSection(jumpSection),
-					  sidePanelNodes[jumpSection].offsetTop == event.target.scrollTop
+					  sidePanelRef.current.offsetHeight +
+							sidePanelRef.current.scrollTop >=
+							sidePanelRef.current.scrollHeight - 10 &&
+					  jumpSection == sidePanelNodes.length - 1
+							? setJumpSection(null)
+							: sidePanelNodes[jumpSection].offsetTop >
+									event.target.scrollTop - 5 &&
+							  sidePanelNodes[jumpSection].offsetTop <
+									event.target.scrollTop + 5
 							? setJumpSection(null)
 							: null)
 				: null;
