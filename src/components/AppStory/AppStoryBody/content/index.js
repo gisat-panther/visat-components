@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import AppStorySidePanel from './SidePanel';
 import {Children, cloneElement, useState} from 'react';
 import './style.scss';
 
@@ -71,7 +72,7 @@ const AppStoryContent = ({className, children}) => {
 	return (
 		<div className={classes}>
 			{Children.map(children, child =>
-				child.type.name == 'AppStorySidePanel'
+				child.type === AppStorySidePanel
 					? cloneElement(child, {
 							onScroll,
 							setSidePanelRef,

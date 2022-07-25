@@ -1,7 +1,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import {useEffect} from 'react';
-import {TagsContainer, Tag} from '@gisatcz/visat-components';
+import Tag from '../../../../../../components/Tag';
+import TagsContainer from '../../../../../../components/Tag/TagsContainer';
 
 import './style.scss';
 

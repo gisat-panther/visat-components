@@ -44,6 +44,8 @@ export default {
 		'react-icons/go',
 		'react-icons/md',
 		'react',
+		'react-dom',
+		'react/jsx-runtime',
 		'react-slider',
 		'react-tooltip',
 		/@babel\/runtime/,
