@@ -1,3 +1,15 @@
+# v0.8.2 (Mon Jul 25 2022)
+
+#### 🐾 Patch
+
+- Fix component type checking [#21](https://github.com/gisat-panther/visat-components/pull/21) ([@vdubr](https://github.com/vdubr))
+
+#### Authors: 1
+
+- Vojtěch Dubrovský ([@vdubr](https://github.com/vdubr))
+
+---
+
 # v0.8.1 (Fri Jul 22 2022)
 
 #### 🐾 Patch
