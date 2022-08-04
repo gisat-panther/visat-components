@@ -11,7 +11,6 @@ const AppStoryHeadline = ({className, children}) => {
 
 AppStoryHeadline.propTypes = {
 	className: PropTypes.string,
-	headline: PropTypes.string,
 	children: PropTypes.node,
 };
 

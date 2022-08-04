@@ -11,7 +11,6 @@ const AppStoryParagraph = ({className, children}) => {
 
 AppStoryParagraph.propTypes = {
 	className: PropTypes.string,
-	text: PropTypes.string,
 	children: PropTypes.node,
 };
 
