@@ -1,3 +1,15 @@
+# v0.9.0 (Fri Aug 05 2022)
+
+#### 🚀 Enhancement
+
+- allow children in AppStory paragraphs [#22](https://github.com/gisat-panther/visat-components/pull/22) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.8.2 (Mon Jul 25 2022)
 
 #### 🐾 Patch
