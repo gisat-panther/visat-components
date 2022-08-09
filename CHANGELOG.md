@@ -1,3 +1,15 @@
+# v0.9.1 (Tue Aug 09 2022)
+
+#### 🐾 Patch
+
+- Export setAppElement for modal component [#23](https://github.com/gisat-panther/visat-components/pull/23) ([@vdubr](https://github.com/vdubr))
+
+#### Authors: 1
+
+- Vojtěch Dubrovský ([@vdubr](https://github.com/vdubr))
+
+---
+
 # v0.9.0 (Fri Aug 05 2022)
 
 #### 🚀 Enhancement
