@@ -5,7 +5,7 @@ import ExpandableLabel, {
 import ExpandableLabelsContainer from './components/ExpandableLabel/ExpandableLabelsContainer';
 import Icon from './components/Icon';
 import IconTool from './components/IconTool';
-import ModalWindow from './components/ModalWindow';
+import * as Modal from './components/ModalWindow';
 import NothingFiltered from './components/NothingFiltered';
 import OpacitySlider from './components/OpacitySlider';
 import Switcher from './components/Switcher';
@@ -40,7 +40,7 @@ export {
 	ExpandableLabelsContainer,
 	Icon,
 	IconTool,
-	ModalWindow,
+	Modal,
 	NothingFiltered,
 	OpacitySlider,
 	Switcher,

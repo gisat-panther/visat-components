@@ -37,4 +37,6 @@ ModalWindow.propTypes = {
 	children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
-export default ModalWindow;
+const setAppElement = Modal.setAppElement;
+
+export {ModalWindow as default, setAppElement};
