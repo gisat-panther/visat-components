@@ -1,3 +1,15 @@
+# v0.9.2 (Wed Aug 10 2022)
+
+#### 🐾 Patch
+
+- Split layerLabel to more files, export clickOutside hook, set layerLa… [#24](https://github.com/gisat-panther/visat-components/pull/24) ([@vdubr](https://github.com/vdubr))
+
+#### Authors: 1
+
+- Vojtěch Dubrovský ([@vdubr](https://github.com/vdubr))
+
+---
+
 # v0.9.1 (Tue Aug 09 2022)
 
 #### 🐾 Patch
