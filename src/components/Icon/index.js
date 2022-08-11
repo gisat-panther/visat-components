@@ -8,6 +8,7 @@ import {
 	MdCompare as Compare,
 	MdExpandLess as ChevronUp,
 	MdExpandMore as ChevronDown,
+	MdHelpOutline as Help,
 	MdOutlineArrowBackIos as ChevronLeft,
 	MdOutlineArrowForwardIos as ChevronRight,
 	MdOutlineCheck as Check,
@@ -104,6 +105,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-forward':
 			i = <Forward />;
+			break;
+		case 'ri-help':
+			i = <Help />;
 			break;
 		case 'ri-info':
 			i = <Info />;
