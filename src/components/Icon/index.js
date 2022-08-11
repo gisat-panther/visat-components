@@ -8,6 +8,7 @@ import {
 	MdCompare as Compare,
 	MdExpandLess as ChevronUp,
 	MdExpandMore as ChevronDown,
+	MdHelpOutline as Help,
 	MdOutlineArrowBackIos as ChevronLeft,
 	MdOutlineArrowForwardIos as ChevronRight,
 	MdOutlineCheck as Check,
@@ -22,6 +23,8 @@ import {
 	MdLeaderboard as BarChart,
 	MdLocationSearching as LocationSearch,
 	MdLocationCity as City,
+	MdLogin as Login,
+	MdLogout as Logout,
 	MdDashboard as Dashboard,
 	MdDashboardCustomize as AddMap,
 	MdReadMore as ReadMore,
@@ -103,11 +106,20 @@ const ReactIcon = ({icon}) => {
 		case 'ri-forward':
 			i = <Forward />;
 			break;
+		case 'ri-help':
+			i = <Help />;
+			break;
 		case 'ri-info':
 			i = <Info />;
 			break;
 		case 'ri-location-search':
 			i = <LocationSearch />;
+			break;
+		case 'ri-login':
+			i = <Login />;
+			break;
+		case 'ri-logout':
+			i = <Logout />;
 			break;
 		case 'ri-more-dots':
 			i = <MoreDots />;
