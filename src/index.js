@@ -1,7 +1,7 @@
-import ExpandableLabel, {
-	ExpandableLabelHeader,
-	ExpandableLabelBody,
-} from './components/ExpandableLabel';
+import useOnClickOutside from './hooks/useOnClickOutside';
+import ExpandableLabel from './components/ExpandableLabel';
+import ExpandableLabelBody from './components/ExpandableLabel/ExpandableLabelBody';
+import ExpandableLabelHeader from './components/ExpandableLabel/ExpandableLabelHeader';
 import ExpandableLabelsContainer from './components/ExpandableLabel/ExpandableLabelsContainer';
 import Icon from './components/Icon';
 import IconTool from './components/IconTool';
@@ -34,6 +34,7 @@ import AppStoryParagraph from './components/AppStory/AppStoryBody/content/compon
 import AppStoryLink from './components/AppStory/AppStoryBody/content/components/AppStoryLink';
 
 export {
+	useOnClickOutside,
 	ExpandableLabel,
 	ExpandableLabelBody,
 	ExpandableLabelHeader,
