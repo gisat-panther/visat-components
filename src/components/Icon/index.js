@@ -22,6 +22,8 @@ import {
 	MdLeaderboard as BarChart,
 	MdLocationSearching as LocationSearch,
 	MdLocationCity as City,
+	MdLogin as Login,
+	MdLogout as Logout,
 	MdDashboard as Dashboard,
 	MdDashboardCustomize as AddMap,
 	MdReadMore as ReadMore,
@@ -108,6 +110,12 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-location-search':
 			i = <LocationSearch />;
+			break;
+		case 'ri-login':
+			i = <Login />;
+			break;
+		case 'ri-logout':
+			i = <Logout />;
 			break;
 		case 'ri-more-dots':
 			i = <MoreDots />;
