@@ -32,6 +32,7 @@ import {
 	MdStarOutline as Star,
 	MdOutlineThumbUpOffAlt as ThumbUp,
 	MdTune as Tune,
+	MdFilterList as Filter,
 } from 'react-icons/md';
 import {
 	SiZenodo as Zenodo,
@@ -177,6 +178,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-square':
 			i = <Square />;
+			break;
+		case 'ri-filter':
+			i = <Filter />;
 			break;
 	}
 
