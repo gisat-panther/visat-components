@@ -1,3 +1,15 @@
+# v0.11.0 (Mon Aug 29 2022)
+
+#### 🚀 Enhancement
+
+- Suggested changes [#26](https://github.com/gisat-panther/visat-components/pull/26) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.10.0 (Thu Aug 11 2022)
 
 #### 🚀 Enhancement
