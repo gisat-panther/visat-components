@@ -3,24 +3,18 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const AppStoryLink = ({className, text, linkDisplay, link}) => {
+const AppStoryLink = ({children, className}) => {
 	const classes = classnames('ptr-AppStoryLink', {}, className);
 
-	return (
-		<li>
-			{text}
-			<a className={classes} href={link}>
-				{linkDisplay}
-			</a>
-		</li>
-	);
+	return <div className={classes}>{children}</div>;
 };
 
 AppStoryLink.propTypes = {
 	className: PropTypes.string,
-	text: PropTypes.string,
-	link: PropTypes.string,
-	linkDisplay: PropTypes.string,
+	children: PropTypes.PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
+	]).isRequired,
 };
 
 export default AppStoryLink;

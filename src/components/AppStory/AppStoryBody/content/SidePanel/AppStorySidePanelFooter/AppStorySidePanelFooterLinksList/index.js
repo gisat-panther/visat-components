@@ -10,7 +10,7 @@ const AppStoryFooterLinksList = ({className, children}) => {
 		className
 	);
 
-	return <ul className={classes}>{children}</ul>;
+	return <div className={classes}>{children}</div>;
 };
 
 AppStoryFooterLinksList.propTypes = {
