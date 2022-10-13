@@ -1,3 +1,15 @@
+# v0.12.0 (Thu Oct 13 2022)
+
+#### 🚀 Enhancement
+
+- Icon: remove layers [#27](https://github.com/gisat-panther/visat-components/pull/27) ([@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 1
+
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.11.0 (Mon Aug 29 2022)
 
 #### 🚀 Enhancement
