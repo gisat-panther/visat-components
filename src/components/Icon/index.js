@@ -20,6 +20,7 @@ import {
 	MdOutlineFolder as Datasets,
 	MdOutlineDarkMode as DarkMode,
 	MdOutlineAccountCircle as Account,
+	MdOutlineLayersClear as RemoveLayers,
 	MdLeaderboard as BarChart,
 	MdLocationSearching as LocationSearch,
 	MdLocationCity as City,
@@ -131,6 +132,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-read-more':
 			i = <ReadMore />;
+			break;
+		case 'ri-remove-layers':
+			i = <RemoveLayers />;
 			break;
 		case 'ri-selection':
 			i = <Selection />;
