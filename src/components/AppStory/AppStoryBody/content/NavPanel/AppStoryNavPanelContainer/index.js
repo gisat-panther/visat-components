@@ -1,18 +1,36 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import {useEffect, useRef, useState} from 'react';
+
 import IconTool from '../../../../../IconTool';
 
 import './style.scss';
-import {useRef} from 'react';
 
 const AppStoryNavPanelContainer = ({
 	className,
 	activeSection,
 	jumpSection,
 	sidePanelRef,
+	contentSize,
+	theme,
 }) => {
+	const [isOverflown, setIsOverflown] = useState();
+	const [lastSidePanelHeight, setLastSidePanelHeight] = useState();
 	const navPanelCasesRef = useRef();
+	const navPanel = useRef();
 	const classes = classnames('ptr-AppStoryNavPanelContainer', {}, className);
+
+	useEffect(() => {
+		navPanel?.current?.offsetHeight
+			? sidePanelRef.current.offsetHeight !== lastSidePanelHeight
+				? navPanel.current.offsetHeight > sidePanelRef.current.offsetHeight
+					? (setIsOverflown(true),
+					  setLastSidePanelHeight(sidePanelRef.current.offsetHeight))
+					: (setIsOverflown(false),
+					  setLastSidePanelHeight(sidePanelRef.current.offsetHeight))
+				: null
+			: null;
+	}, [sidePanelRef, contentSize]);
 
 	let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
 	let navIconsArray = [];
@@ -22,8 +40,8 @@ const AppStoryNavPanelContainer = ({
 				key={index}
 				className={
 					activeSection == index
-						? classnames('ptr-AppStoryNavPanelIcon', {}, 'is-active')
-						: 'ptr-AppStoryNavPanelIcon'
+						? classnames('ptr-AppStoryNavPanelIcon-' + theme, {}, 'is-active')
+						: 'ptr-AppStoryNavPanelIcon-' + theme
 				}
 				icon={
 					index == 0
@@ -47,20 +65,27 @@ const AppStoryNavPanelContainer = ({
 			case 'section':
 				return navPanelCasesNodes.forEach((node, index) => {
 					node == e.currentTarget && activeSection !== index
-						? (sidePanelNodes[index].scrollIntoView(), jumpSection(index))
+						? (sidePanelRef?.current?.scrollTo({
+								top: sidePanelNodes[index].offsetTop,
+						  }),
+						  jumpSection(index))
 						: null;
 				});
 			case 'up':
 				return sidePanelNodes.forEach((node, index) => {
 					node == sidePanelNodes[activeSection] && activeSection !== 0
-						? sidePanelNodes[index - 1].scrollIntoView()
+						? sidePanelRef?.current?.scrollTo({
+								top: sidePanelNodes[index - 1].offsetTop,
+						  })
 						: null;
 				});
 			case 'down':
 				return sidePanelNodes.forEach((node, index) => {
 					node == sidePanelNodes[activeSection] &&
 					activeSection !== sidePanelNodes.length - 1
-						? sidePanelNodes[index + 1].scrollIntoView()
+						? sidePanelRef?.current?.scrollTo({
+								top: sidePanelNodes[index + 1].offsetTop,
+						  })
 						: null;
 				});
 			default:
@@ -69,17 +94,25 @@ const AppStoryNavPanelContainer = ({
 	};
 
 	return (
-		<div className={classes}>
+		<div className={classes} ref={navPanel}>
 			<IconTool
-				className="ptr-AppStoryNavPanelIcon"
+				className={'ptr-AppStoryNavPanelIcon-' + theme}
 				icon={'ri-chevron-up'}
 				onClick={e => scrollToSection(e, 'up')}
 			/>
-			<div className="ptr-AppStoryNavPanelCases" ref={navPanelCasesRef}>
+			<div
+				className="ptr-AppStoryNavPanelCases"
+				ref={navPanelCasesRef}
+				style={
+					isOverflown
+						? {height: '0rem', overflow: 'hidden'}
+						: {height: 'fit-content', overflow: 'visible'}
+				}
+			>
 				{navIconsArray}
 			</div>
 			<IconTool
-				className="ptr-AppStoryNavPanelIcon"
+				className={'ptr-AppStoryNavPanelIcon-' + theme}
 				icon={'ri-chevron-down'}
 				onClick={e => scrollToSection(e, 'down')}
 			/>
@@ -92,6 +125,9 @@ AppStoryNavPanelContainer.propTypes = {
 	activeSection: PropTypes.number,
 	jumpSection: PropTypes.func,
 	sidePanelRef: PropTypes.object,
+	isOverflown: PropTypes.func,
+	contentSize: PropTypes.number,
+	theme: PropTypes.string,
 };
 
 export default AppStoryNavPanelContainer;

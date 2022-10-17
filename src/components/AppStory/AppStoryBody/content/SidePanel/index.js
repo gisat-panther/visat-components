@@ -1,3 +1,5 @@
+import AppStoryNavPanel from '../NavPanel';
+
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import {useRef} from 'react';
@@ -9,18 +11,42 @@ const AppStorySidePanel = ({
 	children,
 	onScroll,
 	setSidePanelRef,
+	layout,
+	theme,
+	activeSection,
+	setJumpSection,
+	contentSize,
+	hideNavigation,
 }) => {
-	const classes = classnames('ptr-AppStorySidePanel', {}, className);
+	const classes = name => {
+		return classnames(
+			name,
+			{},
+			layout,
+			name == 'ptr-AppStorySidePanel' ? className : ''
+		);
+	};
 	const sidePanelRef = useRef();
 
 	return (
-		<div
-			className={classes}
-			ref={sidePanelRef}
-			onScroll={onScroll}
-			onLoad={() => setSidePanelRef(sidePanelRef)}
-		>
-			{children}
+		<div className={classes('ptr-AppStorySidePanel-container')}>
+			{sidePanelRef.current && !hideNavigation ? (
+				<AppStoryNavPanel
+					activeSection={activeSection}
+					setJumpSection={setJumpSection}
+					sidePanelRef={sidePanelRef}
+					contentSize={contentSize}
+					theme={theme}
+				/>
+			) : null}
+			<div
+				className={classes('ptr-AppStorySidePanel')}
+				ref={sidePanelRef}
+				onScroll={onScroll}
+				onLoad={(() => sidePanelRef, setSidePanelRef(sidePanelRef))}
+			>
+				{children}
+			</div>
 		</div>
 	);
 };
@@ -33,6 +59,12 @@ AppStorySidePanel.propTypes = {
 	]).isRequired,
 	onScroll: PropTypes.func,
 	setSidePanelRef: PropTypes.func,
+	layout: PropTypes.string,
+	activeSection: PropTypes.number,
+	setJumpSection: PropTypes.func,
+	contentSize: PropTypes.number,
+	theme: PropTypes.string,
+	hideNavigation: PropTypes.bool,
 };
 
 export default AppStorySidePanel;

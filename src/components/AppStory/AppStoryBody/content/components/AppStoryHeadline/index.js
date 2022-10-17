@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const AppStoryHeadline = ({className, children}) => {
-	const classes = classnames('ptr-AppStoryHeadline', {}, className);
+const AppStoryHeadline = ({className, children, isIntro}) => {
+	const classes = classnames(
+		'ptr-AppStoryHeadline',
+		isIntro ? 'is-intro' : '',
+		{},
+		className
+	);
 
 	return <h1 className={classes}>{children ? children : null}</h1>;
 };
@@ -12,6 +17,7 @@ const AppStoryHeadline = ({className, children}) => {
 AppStoryHeadline.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node,
+	isIntro: PropTypes.bool,
 };
 
 export default AppStoryHeadline;

@@ -26,7 +26,6 @@ import AppStorySidePanel from './components/AppStory/AppStoryBody/content/SidePa
 import AppStorySidePanelCase from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelCase';
 import AppStorySidePanelFooter from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelFooter';
 import AppStorySidePanelIntro from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelIntro';
-import AppStoryFooterLinksList from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelFooter/AppStorySidePanelFooterLinksList';
 import AppStoryHeadline from './components/AppStory/AppStoryBody/content/components/AppStoryHeadline';
 import AppStorySubheadline from './components/AppStory/AppStoryBody/content/components/AppStorySubheadline';
 import AppStoryTags from './components/AppStory/AppStoryBody/content/components/AppStoryTags';
@@ -61,7 +60,6 @@ export {
 	AppStorySidePanelCase,
 	AppStorySidePanelFooter,
 	AppStorySidePanelIntro,
-	AppStoryFooterLinksList,
 	AppStoryHeadline,
 	AppStorySubheadline,
 	AppStoryTags,

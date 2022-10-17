@@ -1,4 +1,3 @@
-import AppStoryNavPanelTopMargin from './AppStoryNavPanelTopMargin';
 import AppStoryNavPanelContainer from './AppStoryNavPanelContainer';
 
 import classnames from 'classnames';
@@ -11,20 +10,24 @@ const AppStoryNavPanel = ({
 	activeSection,
 	setJumpSection,
 	sidePanelRef,
+	layout,
+	contentSize,
+	theme,
 }) => {
-	const classes = classnames('ptr-AppStoryNavPanel', {}, className);
+	const classes = classnames('ptr-AppStoryNavPanel', {}, layout, className);
 	const jumpSection = section => {
 		setJumpSection(section);
 	};
 
 	return (
 		<div className={classes}>
-			<AppStoryNavPanelTopMargin className={''} />
 			<AppStoryNavPanelContainer
 				className={''}
 				activeSection={activeSection}
 				jumpSection={jumpSection}
 				sidePanelRef={sidePanelRef}
+				contentSize={contentSize}
+				theme={theme}
 			/>
 		</div>
 	);
@@ -35,6 +38,9 @@ AppStoryNavPanel.propTypes = {
 	activeSection: PropTypes.number,
 	setJumpSection: PropTypes.func,
 	sidePanelRef: PropTypes.object,
+	layout: PropTypes.string,
+	contentSize: PropTypes.number,
+	theme: PropTypes.string,
 };
 
 export default AppStoryNavPanel;

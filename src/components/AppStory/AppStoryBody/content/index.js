@@ -2,13 +2,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import AppStorySidePanel from './SidePanel';
 import {Children, cloneElement, useState} from 'react';
+import ReactResizeDetector from 'react-resize-detector';
 import './style.scss';
 
-const AppStoryContent = ({className, children}) => {
+const AppStoryContent = ({className, children, layout, theme}) => {
 	const [activeSection, setActiveSection] = useState(0);
 	const [jumpSection, setJumpSection] = useState(null);
 	const [sidePanelRef, setSidePanelRef] = useState(undefined);
-	const classes = classnames('ptr-AppStoryContent', {}, className);
+	const [contentSize, setContentSize] = useState();
+	const classes = classnames('ptr-AppStoryContent', {}, layout, className);
 
 	const onScroll = event => {
 		let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
@@ -45,29 +47,10 @@ const AppStoryContent = ({className, children}) => {
 					}
 				}
 			}
-			// userReachedSection
-			// 	? // user is located in this section (node)
-			// 	  jumpSection == null
-			// 		? // user is scrolling
-			// 		  userReachedBottom
-			// 			? // user reached the bottom section
-			// 			  setActiveSection(sidePanelNodes.length - 1)
-			// 			: setActiveSection(index)
-			// 		: // user jumped to a section
-			// 		  (setActiveSection(jumpSection),
-			// 		  userReachedBottom && jumpSection == sidePanelNodes.length - 1
-			// 				? // user jumped to the bottom section and reached it
-			// 				  setJumpSection(null)
-			// 				: sidePanelNodes[jumpSection].offsetTop >
-			// 						event.target.scrollTop - 5 &&
-			// 				  sidePanelNodes[jumpSection].offsetTop <
-			// 						event.target.scrollTop + 5
-			// 				? // user reached the jumped section
-			// 				  setJumpSection(null)
-			// 				: null)
-			// 	: null;
 		});
 	};
+
+	const defineTheme = theme ? theme : 'default';
 
 	return (
 		<div className={classes}>
@@ -76,15 +59,26 @@ const AppStoryContent = ({className, children}) => {
 					? cloneElement(child, {
 							onScroll,
 							setSidePanelRef,
+							layout,
+							theme: defineTheme,
+							activeSection,
+							setJumpSection,
+							contentSize,
 					  })
-					: sidePanelRef !== undefined
+					: sidePanelRef !== undefined ||
+					  !Children.map(children, child => {
+							return child.type == AppStorySidePanel;
+					  }).includes(true) // if the sidePanel is not used render mainPanel
 					? cloneElement(child, {
 							activeSection,
 							setJumpSection,
 							sidePanelRef,
+							layout,
+							theme: defineTheme,
 					  })
 					: null
 			)}
+			<ReactResizeDetector onResize={event => setContentSize(event)} />
 		</div>
 	);
 };
@@ -95,6 +89,8 @@ AppStoryContent.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
 	]).isRequired,
+	layout: PropTypes.string,
+	theme: PropTypes.string,
 };
 
 export default AppStoryContent;

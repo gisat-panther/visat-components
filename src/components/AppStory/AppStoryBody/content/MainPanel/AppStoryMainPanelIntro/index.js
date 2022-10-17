@@ -2,7 +2,12 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const AppStoryMainPanelIntro = ({className, children, backgroundImage}) => {
+const AppStoryMainPanelIntro = ({
+	className,
+	children,
+	backgroundImage,
+	theme,
+}) => {
 	const classes = classnames('ptr-AppStoryMainPanelIntro', {}, className);
 
 	return (
@@ -12,7 +17,9 @@ const AppStoryMainPanelIntro = ({className, children, backgroundImage}) => {
 				backgroundImage: `url(${backgroundImage})`,
 			}}
 		>
-			<div className="ptr-AppStoryMainPanelIntro-overlay">{children}</div>
+			<div className={'ptr-AppStoryMainPanelIntro-overlay-' + theme}>
+				{children}
+			</div>
 		</div>
 	);
 };
@@ -24,6 +31,7 @@ AppStoryMainPanelIntro.propTypes = {
 		PropTypes.node,
 	]).isRequired,
 	backgroundImage: PropTypes.string, //path to background image
+	theme: PropTypes.string,
 };
 
 export default AppStoryMainPanelIntro;
