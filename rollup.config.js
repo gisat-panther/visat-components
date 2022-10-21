@@ -46,6 +46,7 @@ export default {
 		'react',
 		'react-dom',
 		'react/jsx-runtime',
+		'react-resize-detector',
 		'react-slider',
 		'react-tooltip',
 		/@babel\/runtime/,
