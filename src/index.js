@@ -13,24 +13,21 @@ import Tag from './components/Tag';
 import TagsContainer from './components/Tag/TagsContainer';
 import Toggle from './components/Toggle';
 import Tooltip from './components/Tooltip';
-
-import AppStory from './components/AppStory';
-import AppStoryBody from './components/AppStory/AppStoryBody';
-import AppStoryContent from './components/AppStory/AppStoryBody/content';
-import AppStoryMainPanel from './components/AppStory/AppStoryBody/content/MainPanel';
-import AppStoryMainPanelIntro from './components/AppStory/AppStoryBody/content/MainPanel/AppStoryMainPanelIntro';
-import AppStoryMainPanelFooter from './components/AppStory/AppStoryBody/content/MainPanel/AppStoryMainPanelFooter';
-import AppStoryMainPanelFooterLink from './components/AppStory/AppStoryBody/content/MainPanel/AppStoryMainPanelFooter/AppStoryMainPanelFooterLink';
-import AppStoryNavPanel from './components/AppStory/AppStoryBody/content/NavPanel';
-import AppStorySidePanel from './components/AppStory/AppStoryBody/content/SidePanel';
-import AppStorySidePanelCase from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelCase';
-import AppStorySidePanelFooter from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelFooter';
-import AppStorySidePanelIntro from './components/AppStory/AppStoryBody/content/SidePanel/AppStorySidePanelIntro';
-import AppStoryHeadline from './components/AppStory/AppStoryBody/content/components/AppStoryHeadline';
-import AppStorySubheadline from './components/AppStory/AppStoryBody/content/components/AppStorySubheadline';
-import AppStoryTags from './components/AppStory/AppStoryBody/content/components/AppStoryTags';
-import AppStoryParagraph from './components/AppStory/AppStoryBody/content/components/AppStoryParagraph';
-import AppStoryLink from './components/AppStory/AppStoryBody/content/components/AppStoryLink';
+import AppStoryContent from './components/AppStory';
+import AppStoryMainPanel from './components/AppStory/MainPanel';
+import AppStoryMainPanelIntro from './components/AppStory/MainPanel/AppStoryMainPanelIntro';
+import AppStoryMainPanelFooter from './components/AppStory/MainPanel/AppStoryMainPanelFooter';
+import AppStoryMainPanelFooterLink from './components/AppStory/MainPanel/AppStoryMainPanelFooter/AppStoryMainPanelFooterLink';
+import AppStoryNavPanel from './components/AppStory/NavPanel';
+import AppStorySidePanel from './components/AppStory/SidePanel';
+import AppStorySidePanelCase from './components/AppStory/SidePanel/AppStorySidePanelCase';
+import AppStorySidePanelFooter from './components/AppStory/SidePanel/AppStorySidePanelFooter';
+import AppStorySidePanelIntro from './components/AppStory/SidePanel/AppStorySidePanelIntro';
+import AppStoryHeadline from './components/AppStory/components/AppStoryHeadline';
+import AppStorySubheadline from './components/AppStory/components/AppStorySubheadline';
+import AppStoryTags from './components/AppStory/components/AppStoryTags';
+import AppStoryParagraph from './components/AppStory/components/AppStoryParagraph';
+import AppStoryLink from './components/AppStory/components/AppStoryLink';
 
 export {
 	useOnClickOutside,
@@ -48,8 +45,6 @@ export {
 	TagsContainer,
 	Toggle,
 	Tooltip,
-	AppStory,
-	AppStoryBody,
 	AppStoryContent,
 	AppStoryMainPanel,
 	AppStoryMainPanelIntro,

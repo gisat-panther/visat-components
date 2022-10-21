@@ -1,0 +1,8 @@
+@use 'sass:math';
+@import '../styles/variables';
+
+.ptr-AppStoryNavPanel {
+	width: $appStoryNavPanelWidth;
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,11 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-AppStoryLink {
+	@include maxWidth('x-small') {
+		font-size: $b1;
+	}
+	@include maxHeight('x-small') {
+		font-size: $b1;
+	}
+}

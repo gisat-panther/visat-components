@@ -1,0 +1,45 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-AppStoryNavPanelIcon-default {
+	color: var(--base100);
+}
+
+.ptr-AppStoryNavPanelIcon-cure {
+	color: var(--base100);
+}
+
+.ptr-AppStoryNavPanelIcon-default:hover {
+	background-color: transparent;
+	color: rgb(153, 204, 255);
+}
+
+.ptr-AppStoryNavPanelIcon-cure:hover {
+	background-color: transparent;
+	color: var(--accent60);
+}
+
+.ptr-dark .ptr-AppStoryNavPanelIcon-default:hover {
+	background-color: transparent;
+}
+
+.ptr-dark .ptr-AppStoryNavPanelIcon-cure:hover {
+	background-color: transparent;
+}
+
+.ptr-AppStoryNavPanelIcon-default.is-active {
+	background-color: transparent;
+	color: rgb(153, 204, 255);
+}
+
+.ptr-AppStoryNavPanelIcon-cure.is-active {
+	background-color: transparent;
+	color: var(--accent60);
+}
+
+.ptr-AppStoryNavPanelContainer {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
