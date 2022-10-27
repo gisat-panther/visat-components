@@ -1,0 +1,38 @@
+@use 'sass:math';
+@import '../styles/variables';
+
+.ptr-StorySidePanel-container {
+	width: calc(#{$StoryNavPanelWidth} + #{$StorySidePanelWidth});
+	display: flex;
+	flex-flow: row;
+	box-shadow: 3px 0 3px rgb(0 0 0 / 15%);
+	order: 1;
+	z-index: 2;
+	@include minWidth('xx-large') {
+		width: calc(#{$StoryNavPanelWidth} + #{$StorySidePanelWidth} + 10rem);
+	}
+	@include maxWidth('large') {
+		width: calc(#{$StoryNavPanelWidth} + #{$StorySidePanelWidth} - 5rem);
+	}
+	@include maxWidth('medium') {
+		width: 100%;
+		height: 40%;
+		order: 2;
+	}
+}
+
+.ptr-StorySidePanel {
+	width: calc(100% - #{$StoryNavPanelWidth});
+	overflow: auto;
+	display: flex;
+	flex-flow: column;
+	scroll-behavior: smooth;
+	position: relative;
+	z-index: 10;
+}
+
+.ptr-StorySidePanel-container.vertical {
+	width: 100%;
+	height: 40%;
+	order: 2;
+}

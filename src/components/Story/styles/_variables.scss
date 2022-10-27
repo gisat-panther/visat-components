@@ -1,0 +1,7 @@
+@use 'sass:math';
+@import '../../../styles/variables';
+
+
+$StoryNavPanelWidth: 2.5rem;
+$StorySidePanelWidth: 25rem;
+$StoryMainPanelWidth: calc(100% - 2.5rem - 25rem);

@@ -1,7 +1,0 @@
-@use 'sass:math';
-@import '../../../styles/variables';
-
-
-$appStoryNavPanelWidth: 2.5rem;
-$appStorySidePanelWidth: 25rem;
-$appStoryMainPanelWidth: calc(100% - 2.5rem - 25rem);

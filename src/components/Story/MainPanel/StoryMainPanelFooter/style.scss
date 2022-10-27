@@ -1,0 +1,22 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-StoryMainPanelFooter-default {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(230, 243, 255);
+}
+
+.ptr-StoryMainPanelFooter-cure {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(var(--base10), var(--base25));
+}

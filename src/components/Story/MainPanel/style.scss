@@ -1,0 +1,28 @@
+@use 'sass:math';
+@import '../styles/variables';
+
+.ptr-StoryMainPanel {
+	width: calc(100% - #{$StoryNavPanelWidth} - #{$StorySidePanelWidth});
+	height: 100%;
+	overflow: auto;
+	order: 2;
+	@include maxWidth('large') {
+		width: calc(100% - #{$StoryNavPanelWidth} - #{$StorySidePanelWidth} + 5rem);
+	}
+	@include minWidth('xxx-large') {
+		width: calc(100% - #{$StoryNavPanelWidth} - #{$StorySidePanelWidth} - 5rem);
+	}
+	@include maxWidth('medium') {
+		width: 100%;
+		height: 60%;
+		order: 1;
+		box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.15);
+	}
+}
+
+.ptr-StoryMainPanel.vertical {
+	width: 100%;
+	height: 60%;
+	order: 1;
+	box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
