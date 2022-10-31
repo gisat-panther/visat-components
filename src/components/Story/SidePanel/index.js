@@ -2,7 +2,7 @@ import StoryNavPanel from './NavPanel';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import {useRef} from 'react';
+import {useEffect, useRef} from 'react';
 
 import './style.scss';
 
@@ -19,6 +19,10 @@ const StorySidePanel = ({
 	hideNavigation,
 	navigationIcons,
 }) => {
+	useEffect(() => {
+		setSidePanelRef(sidePanelRef);
+	}, []);
+
 	const classes = name => {
 		return classnames(
 			name,
@@ -46,7 +50,6 @@ const StorySidePanel = ({
 				style={hideNavigation ? {width: '100%', paddingLeft: '1rem'} : {}}
 				ref={sidePanelRef}
 				onScroll={onScroll}
-				onLoad={(() => sidePanelRef, setSidePanelRef(sidePanelRef))}
 			>
 				{children}
 			</div>
