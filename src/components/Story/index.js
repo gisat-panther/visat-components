@@ -10,7 +10,12 @@ const Story = ({className, children, panelLayout, theme}) => {
 	const [jumpSection, setJumpSection] = useState(null);
 	const [sidePanelRef, setSidePanelRef] = useState(undefined);
 	const [contentSize, setContentSize] = useState();
-	const classes = classnames('ptr-Story', {}, panelLayout, className);
+	const classes = classnames(
+		'ptr-Story',
+		{},
+		'is-' + panelLayout + '-layout',
+		className
+	);
 
 	const onScroll = event => {
 		let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
@@ -51,7 +56,6 @@ const Story = ({className, children, panelLayout, theme}) => {
 		});
 	};
 
-	const defineTheme = theme ? theme : 'default';
 	const noSidePanel = !Children.map(children, child => {
 		return child.type === StorySidePanel;
 	}).includes(true);
@@ -64,7 +68,7 @@ const Story = ({className, children, panelLayout, theme}) => {
 							onScroll,
 							setSidePanelRef,
 							panelLayout,
-							theme: defineTheme,
+							theme,
 							activeSection,
 							setJumpSection,
 							contentSize,
@@ -75,7 +79,7 @@ const Story = ({className, children, panelLayout, theme}) => {
 							setJumpSection,
 							sidePanelRef,
 							panelLayout,
-							theme: defineTheme,
+							theme,
 							noSidePanel: noSidePanel,
 					  })
 					: null

@@ -19,7 +19,9 @@ const StoryNavPanelContainer = ({
 	const [lastSidePanelHeight, setLastSidePanelHeight] = useState();
 	const navPanelCasesRef = useRef();
 	const navPanel = useRef();
-	const classes = classnames('ptr-StoryNavPanelContainer', {}, className);
+
+	const classes = name =>
+		classnames(name, {}, 'is-' + theme + '-theme', className);
 
 	useEffect(() => {
 		navPanel?.current?.offsetHeight
@@ -41,8 +43,8 @@ const StoryNavPanelContainer = ({
 				key={index}
 				className={
 					activeSection === index
-						? classnames('ptr-StoryNavPanelIcon-' + theme, {}, 'is-active')
-						: 'ptr-StoryNavPanelIcon-' + theme
+						? classnames(classes('ptr-StoryNavPanelIcon'), {}, 'is-active')
+						: classes('ptr-StoryNavPanelIcon')
 				}
 				icon={
 					index === 0
@@ -101,9 +103,9 @@ const StoryNavPanelContainer = ({
 	};
 
 	return (
-		<div className={classes} ref={navPanel}>
+		<div className={classes('ptr-StoryNavPanelContainer')} ref={navPanel}>
 			<IconTool
-				className={'ptr-StoryNavPanelIcon-' + theme}
+				className={classes('ptr-StoryNavPanelIcon')}
 				icon={'ri-chevron-up'}
 				onClick={e => scrollToSection(e, 'up')}
 			/>
@@ -119,7 +121,7 @@ const StoryNavPanelContainer = ({
 				{navIconsArray}
 			</div>
 			<IconTool
-				className={'ptr-StoryNavPanelIcon-' + theme}
+				className={classes('ptr-StoryNavPanelIcon')}
 				icon={'ri-chevron-down'}
 				onClick={e => scrollToSection(e, 'down')}
 			/>

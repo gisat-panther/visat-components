@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import './style.scss';
 
-const StoryMainPanelFooter = ({className, children, panelLayout, theme}) => {
+const StoryMainPanelFooter = ({className, children, theme}) => {
 	const classes = classnames(
-		'ptr-StoryMainPanelFooter-' + theme,
+		'ptr-StoryMainPanelFooter',
 		{},
-		panelLayout,
+		'is-' + theme + '-theme',
 		className
 	);
 
@@ -20,7 +20,6 @@ StoryMainPanelFooter.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
 	]).isRequired,
-	panelLayout: PropTypes.string,
 	theme: PropTypes.string,
 };
 

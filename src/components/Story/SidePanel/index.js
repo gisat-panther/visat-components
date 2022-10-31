@@ -24,12 +24,7 @@ const StorySidePanel = ({
 	}, []);
 
 	const classes = name => {
-		return classnames(
-			name,
-			{},
-			panelLayout,
-			name === 'ptr-StorySidePanel' ? className : ''
-		);
+		return classnames(name, {}, 'is-' + panelLayout + '-layout', className);
 	};
 	const sidePanelRef = useRef();
 

@@ -1,45 +1,43 @@
 @use 'sass:math';
 @import '../../../styles/variables';
 
-.ptr-StoryNavPanelIcon-default {
-	color: var(--base100);
-}
-
-.ptr-StoryNavPanelIcon-cure {
-	color: var(--base100);
-}
-
-.ptr-StoryNavPanelIcon-default:hover {
-	background-color: transparent;
-	color: rgb(153, 204, 255);
-}
-
-.ptr-StoryNavPanelIcon-cure:hover {
-	background-color: transparent;
-	color: var(--accent60);
-}
-
-.ptr-dark .ptr-StoryNavPanelIcon-default:hover {
-	background-color: transparent;
-}
-
-.ptr-dark .ptr-StoryNavPanelIcon-cure:hover {
-	background-color: transparent;
-}
-
-.ptr-StoryNavPanelIcon-default.is-active {
-	background-color: transparent;
-	color: rgb(153, 204, 255);
-}
-
-.ptr-StoryNavPanelIcon-cure.is-active {
-	background-color: transparent;
-	color: var(--accent60);
-}
-
 .ptr-StoryNavPanelContainer {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.ptr-StoryNavPanelIcon {
+	background-color: transparent;
+	color: var(--base100);
+}
+
+.ptr-StoryNavPanelIcon:hover {
+	background-color: transparent;
+	color: rgb(153, 204, 255);
+}
+
+.ptr-StoryNavPanelIcon.is-active {
+	color: rgb(153, 204, 255);
+}
+
+.ptr-dark .ptr-StoryNavPanelIcon {
+	background-color: transparent;
+}
+
+.ptr-dark .ptr-StoryNavPanelIcon:hover {
+	background-color: transparent;
+}
+
+.ptr-StoryNavPanelIcon.is-cure-theme {
+	color: var(--base100);
+}
+
+.ptr-StoryNavPanelIcon.is-cure-theme:hover {
+	color: var(--accent60);
+}
+
+.ptr-StoryNavPanelIcon.is-cure-theme.is-active {
+	color: var(--accent60);
 }

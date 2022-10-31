@@ -3,16 +3,17 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const StoryMainPanelIntro = ({className, children, backgroundImage, theme}) => {
-	const classes = classnames('ptr-StoryMainPanelIntro', {}, className);
+	const classes = name =>
+		classnames(name, {}, 'is-' + theme + '-theme', className);
 
 	return (
 		<div
-			className={classes}
+			className={classes('ptr-StoryMainPanelIntro')}
 			style={{
 				backgroundImage: `url(${backgroundImage})`,
 			}}
 		>
-			<div className={'ptr-StoryMainPanelIntro-overlay-' + theme}>
+			<div className={classes('ptr-StoryMainPanelIntro-overlay')}>
 				{children}
 			</div>
 		</div>

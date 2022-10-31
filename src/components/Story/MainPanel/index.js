@@ -12,7 +12,12 @@ const StoryMainPanel = ({
 	theme,
 	noSidePanel,
 }) => {
-	const classes = classnames('ptr-StoryMainPanel', {}, panelLayout, className);
+	const classes = classnames(
+		'ptr-StoryMainPanel',
+		{},
+		'is-' + panelLayout + '-layout',
+		className
+	);
 	let newChildren = children;
 	let sidePanelNodes;
 	sidePanelRef
@@ -29,7 +34,7 @@ const StoryMainPanel = ({
 		: null;
 	return (
 		<div className={classes} style={noSidePanel ? {width: '100%'} : {}}>
-			{cloneElement(newChildren[activeSection], {panelLayout, theme})}
+			{cloneElement(newChildren[activeSection], {theme})}
 		</div>
 	);
 };
