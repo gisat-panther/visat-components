@@ -1,3 +1,16 @@
+# v0.12.1 (Mon Oct 31 2022)
+
+#### 🐾 Patch
+
+- Story: final adjustments [#28](https://github.com/gisat-panther/visat-components/pull/28) ([@KrystofVavra](https://github.com/KrystofVavra) [@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 2
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.12.0 (Thu Oct 13 2022)
 
 #### 🚀 Enhancement
