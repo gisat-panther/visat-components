@@ -42,7 +42,13 @@ const StorySidePanel = ({
 			) : null}
 			<div
 				className={classes('ptr-StorySidePanel')}
-				style={hideNavigation ? {width: '100%', paddingLeft: '1rem'} : {}}
+				style={
+					hideNavigation
+						? {width: '100%', paddingLeft: '1rem'}
+						: !sidePanelRef.current
+						? {marginLeft: '2.5rem'}
+						: {}
+				}
 				ref={sidePanelRef}
 				onScroll={onScroll}
 			>
