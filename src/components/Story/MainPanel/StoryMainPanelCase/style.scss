@@ -1,0 +1,10 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.ptr-StoryMainPanelCase {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
