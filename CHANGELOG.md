@@ -1,3 +1,15 @@
+# v0.13.0 (Thu Dec 08 2022)
+
+#### 🚀 Enhancement
+
+- Add new icons for WorldWater intro [#29](https://github.com/gisat-panther/visat-components/pull/29) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.12.1 (Mon Oct 31 2022)
 
 #### 🐾 Patch
