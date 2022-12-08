@@ -34,6 +34,8 @@ import {
 	MdOutlineThumbUpOffAlt as ThumbUp,
 	MdTune as Tune,
 	MdFilterList as Filter,
+	MdImageSearch as ImageSearch,
+	MdOutlineMiscellaneousServices as Services,
 } from 'react-icons/md';
 import {
 	SiZenodo as Zenodo,
@@ -46,8 +48,10 @@ import {AiFillHome as Home} from 'react-icons/ai';
 import {
 	GoPrimitiveDot as Dot,
 	GoPrimitiveSquare as Square,
+	GoTools as Tools,
 } from 'react-icons/go';
 import {HiCursorClick as Selection} from 'react-icons/hi';
+import {ImStatsBars as Statistics} from 'react-icons/im';
 import {Icon as PantherIcon} from '@gisatcz/ptr-atoms';
 import './style.scss';
 
@@ -185,6 +189,18 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-filter':
 			i = <Filter />;
+			break;
+		case 'ri-services':
+			i = <Services />;
+			break;
+		case 'ri-imgSearch':
+			i = <ImageSearch />;
+			break;
+		case 'ri-tools':
+			i = <Tools />;
+			break;
+		case 'ri-statistics':
+			i = <Statistics />;
 			break;
 	}
 
