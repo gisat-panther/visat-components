@@ -12,6 +12,7 @@ import {
 	MdOutlineArrowBackIos as ChevronLeft,
 	MdOutlineArrowForwardIos as ChevronRight,
 	MdOutlineCheck as Check,
+	MdOutlineFileDownload as Download,
 	MdOutlineSpaceDashboard as Applications,
 	MdOutlineInfo as Info,
 	MdFilterNone as Collections,
@@ -33,6 +34,7 @@ import {
 	MdStarOutline as Star,
 	MdOutlineThumbUpOffAlt as ThumbUp,
 	MdTune as Tune,
+	MdOutlineVerticalAlignCenter as VerticalAlignCenter,
 	MdFilterList as Filter,
 	MdImageSearch as ImageSearch,
 	MdOutlineMiscellaneousServices as Services,
@@ -45,6 +47,7 @@ import {
 	SiResearchgate as Researchgate,
 } from 'react-icons/si';
 import {AiFillHome as Home} from 'react-icons/ai';
+import {BiWater as Water} from 'react-icons/bi';
 import {
 	GoPrimitiveDot as Dot,
 	GoPrimitiveSquare as Square,
@@ -52,6 +55,7 @@ import {
 } from 'react-icons/go';
 import {HiCursorClick as Selection} from 'react-icons/hi';
 import {ImStatsBars as Statistics} from 'react-icons/im';
+import {TbSatellite as Satellite} from 'react-icons/tb';
 import {Icon as PantherIcon} from '@gisatcz/ptr-atoms';
 import './style.scss';
 
@@ -109,6 +113,9 @@ const ReactIcon = ({icon}) => {
 		case 'ri-dark-mode':
 			i = <DarkMode />;
 			break;
+		case 'ri-download':
+			i = <Download />;
+			break;
 		case 'ri-forward':
 			i = <Forward />;
 			break;
@@ -139,6 +146,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-remove-layers':
 			i = <RemoveLayers />;
+			break;
+		case 'ri-satellite':
+			i = <Satellite />;
 			break;
 		case 'ri-selection':
 			i = <Selection />;
@@ -201,6 +211,12 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-statistics':
 			i = <Statistics />;
+			break;
+		case 'ri-vertical-align-center':
+			i = <VerticalAlignCenter />;
+			break;
+		case 'ri-water':
+			i = <Water />;
 			break;
 	}
 
