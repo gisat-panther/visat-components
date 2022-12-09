@@ -1,3 +1,15 @@
+# v0.14.0 (Fri Dec 09 2022)
+
+#### 🚀 Enhancement
+
+- Add icons for world water [#30](https://github.com/gisat-panther/visat-components/pull/30) ([@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 1
+
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.13.0 (Thu Dec 08 2022)
 
 #### 🚀 Enhancement
