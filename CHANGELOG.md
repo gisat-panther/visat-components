@@ -1,3 +1,15 @@
+# v0.15.0 (Mon Dec 19 2022)
+
+#### 🚀 Enhancement
+
+- Add icon for Insar Apps [#31](https://github.com/gisat-panther/visat-components/pull/31) ([@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 1
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+
+---
+
 # v0.14.0 (Fri Dec 09 2022)
 
 #### 🚀 Enhancement
