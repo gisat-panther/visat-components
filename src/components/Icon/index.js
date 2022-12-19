@@ -38,6 +38,7 @@ import {
 	MdFilterList as Filter,
 	MdImageSearch as ImageSearch,
 	MdOutlineMiscellaneousServices as Services,
+	MdMinimize as Minimise,
 } from 'react-icons/md';
 import {
 	SiZenodo as Zenodo,
@@ -217,6 +218,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-water':
 			i = <Water />;
+			break;
+		case 'ri-minimise':
+			i = <Minimise />;
 			break;
 	}
 
