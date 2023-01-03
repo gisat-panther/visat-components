@@ -40,6 +40,7 @@ import {
 	MdOutlineMiscellaneousServices as Services,
 	MdScatterPlot as ScatterChartBasic,
 	MdShowChart as LineChartBasic,
+	MdMinimize as Minimise,
 } from 'react-icons/md';
 import {
 	SiZenodo as Zenodo,
@@ -225,6 +226,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-water':
 			i = <Water />;
+			break;
+		case 'ri-minimise':
+			i = <Minimise />;
 			break;
 	}
 
