@@ -1,3 +1,15 @@
+# v0.16.0 (Tue Jan 03 2023)
+
+#### 🚀 Enhancement
+
+- Feature/chart icons [#32](https://github.com/gisat-panther/visat-components/pull/32) ([@vlach1989](https://github.com/vlach1989))
+
+#### Authors: 1
+
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.15.0 (Mon Dec 19 2022)
 
 #### 🚀 Enhancement
