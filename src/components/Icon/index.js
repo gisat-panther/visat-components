@@ -38,6 +38,8 @@ import {
 	MdFilterList as Filter,
 	MdImageSearch as ImageSearch,
 	MdOutlineMiscellaneousServices as Services,
+	MdScatterPlot as ScatterChartBasic,
+	MdShowChart as LineChartBasic,
 	MdMinimize as Minimise,
 } from 'react-icons/md';
 import {
@@ -126,6 +128,9 @@ const ReactIcon = ({icon}) => {
 		case 'ri-info':
 			i = <Info />;
 			break;
+		case 'ri-line-chart-basic':
+			i = <LineChartBasic />;
+			break;
 		case 'ri-location-search':
 			i = <LocationSearch />;
 			break;
@@ -150,6 +155,9 @@ const ReactIcon = ({icon}) => {
 			break;
 		case 'ri-satellite':
 			i = <Satellite />;
+			break;
+		case 'ri-scatter-chart-basic':
+			i = <ScatterChartBasic />;
 			break;
 		case 'ri-selection':
 			i = <Selection />;
