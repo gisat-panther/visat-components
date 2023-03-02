@@ -1,11 +1,11 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import StorySidePanel from './SidePanel';
-import {Children, cloneElement, useState} from 'react';
+import {Children, cloneElement, useEffect, useState} from 'react';
 import ReactResizeDetector from 'react-resize-detector';
 import './style.scss';
 
-const Story = ({className, children, panelLayout, theme}) => {
+const Story = ({className, children, panelLayout, theme, activeStep = 0}) => {
 	const [activeSection, setActiveSection] = useState(0);
 	const [jumpSection, setJumpSection] = useState(null);
 	const [sidePanelRef, setSidePanelRef] = useState(undefined);
@@ -17,8 +17,16 @@ const Story = ({className, children, panelLayout, theme}) => {
 		className
 	);
 
+	useEffect(() => {
+		if (activeStep === -1) {
+			const numOfSteps = children?.[0]?.props?.children?.length; // TODO how to find out number of steps differently
+			activeStep = numOfSteps ? numOfSteps - 1 : 0;
+		}
+		setActiveSection(activeStep);
+	}, [activeStep]);
+
 	const onScroll = event => {
-		let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
+		const sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
 		let userReachedBottom =
 			sidePanelRef.current.offsetHeight + sidePanelRef.current.scrollTop >=
 			sidePanelRef.current.scrollHeight - 10;
@@ -90,6 +98,7 @@ const Story = ({className, children, panelLayout, theme}) => {
 };
 
 Story.propTypes = {
+	activeStep: PropTypes.number,
 	className: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),

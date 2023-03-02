@@ -35,6 +35,10 @@ const StoryNavPanelContainer = ({
 			: null;
 	}, [sidePanelRef, contentSize]);
 
+	useEffect(() => {
+		scrollToSection(null, 'section', activeSection);
+	}, [activeSection]);
+
 	let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
 	let navIconsArray = [];
 	sidePanelNodes.forEach((node, index) => {
@@ -63,23 +67,21 @@ const StoryNavPanelContainer = ({
 					text: node.childNodes[0].innerText,
 					position: 'right',
 				}}
-				onClick={e => scrollToSection(e, 'section')}
+				onClick={e => scrollToSection(e, 'section', index)}
 			/>
 		);
 	});
 
-	const scrollToSection = (e, type) => {
-		let navPanelCasesNodes = Array.from(navPanelCasesRef.current.childNodes);
+	const scrollToSection = (e, type, forceIndex) => {
 		switch (type) {
 			case 'section':
-				return navPanelCasesNodes.forEach((node, index) => {
-					node === e.currentTarget && activeSection !== index
-						? (sidePanelRef?.current?.scrollTo({
-								top: sidePanelNodes[index].offsetTop,
-						  }),
-						  jumpSection(index))
-						: null;
-				});
+				if (forceIndex || forceIndex === 0) {
+					sidePanelRef?.current?.scrollTo({
+						top: sidePanelNodes[forceIndex].offsetTop,
+					});
+					jumpSection(forceIndex);
+				}
+				break;
 			case 'up':
 				return sidePanelNodes.forEach((node, index) => {
 					node === sidePanelNodes[activeSection] && activeSection !== 0
@@ -128,7 +130,6 @@ const StoryNavPanelContainer = ({
 		</div>
 	);
 };
-
 StoryNavPanelContainer.propTypes = {
 	className: PropTypes.string,
 	activeSection: PropTypes.number,
