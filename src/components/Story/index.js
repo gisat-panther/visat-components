@@ -5,7 +5,14 @@ import {Children, cloneElement, useEffect, useState} from 'react';
 import ReactResizeDetector from 'react-resize-detector';
 import './style.scss';
 
-const Story = ({className, children, panelLayout, theme, activeStep = 0}) => {
+const Story = ({
+	className,
+	children,
+	panelLayout,
+	theme,
+	activeStep, // if activeStep is set - it is the default active section
+	onStepChange, // called when section is changed with the active section as the argument
+}) => {
 	const [activeSection, setActiveSection] = useState(0);
 	const [jumpSection, setJumpSection] = useState(null);
 	const [sidePanelRef, setSidePanelRef] = useState(undefined);
@@ -18,12 +25,10 @@ const Story = ({className, children, panelLayout, theme, activeStep = 0}) => {
 	);
 
 	useEffect(() => {
-		if (activeStep === -1) {
-			const numOfSteps = children?.[0]?.props?.children?.length; // TODO how to find out number of steps differently
-			activeStep = numOfSteps ? numOfSteps - 1 : 0;
+		if (onStepChange) {
+			onStepChange(activeSection);
 		}
-		setActiveSection(activeStep);
-	}, [activeStep]);
+	}, [activeSection]);
 
 	const onScroll = event => {
 		const sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
@@ -78,6 +83,7 @@ const Story = ({className, children, panelLayout, theme, activeStep = 0}) => {
 							panelLayout,
 							theme,
 							activeSection,
+							activeStep,
 							setJumpSection,
 							contentSize,
 					  })
@@ -99,6 +105,8 @@ const Story = ({className, children, panelLayout, theme, activeStep = 0}) => {
 
 Story.propTypes = {
 	activeStep: PropTypes.number,
+	onStepChange: PropTypes.func,
+	defaultStep: PropTypes.number,
 	className: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),

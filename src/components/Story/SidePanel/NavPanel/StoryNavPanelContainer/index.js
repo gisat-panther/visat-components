@@ -9,7 +9,7 @@ import './style.scss';
 const StoryNavPanelContainer = ({
 	className,
 	activeSection,
-	jumpSection,
+	setJumpSection,
 	sidePanelRef,
 	contentSize,
 	theme,
@@ -34,10 +34,6 @@ const StoryNavPanelContainer = ({
 				: null
 			: null;
 	}, [sidePanelRef, contentSize]);
-
-	useEffect(() => {
-		scrollToSection(null, 'section', activeSection);
-	}, [activeSection]);
 
 	let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
 	let navIconsArray = [];
@@ -67,21 +63,23 @@ const StoryNavPanelContainer = ({
 					text: node.childNodes[0].innerText,
 					position: 'right',
 				}}
-				onClick={e => scrollToSection(e, 'section', index)}
+				onClick={e => scrollToSection(e, 'section')}
 			/>
 		);
 	});
 
-	const scrollToSection = (e, type, forceIndex) => {
+	const scrollToSection = (e, type) => {
+		let navPanelCasesNodes = Array.from(navPanelCasesRef.current.childNodes);
 		switch (type) {
 			case 'section':
-				if (forceIndex || forceIndex === 0) {
-					sidePanelRef?.current?.scrollTo({
-						top: sidePanelNodes[forceIndex].offsetTop,
-					});
-					jumpSection(forceIndex);
-				}
-				break;
+				return navPanelCasesNodes.forEach((node, index) => {
+					node === e.currentTarget && activeSection !== index
+						? (sidePanelRef?.current?.scrollTo({
+								top: sidePanelNodes[index].offsetTop,
+						  }),
+						  setJumpSection(index))
+						: null;
+				});
 			case 'up':
 				return sidePanelNodes.forEach((node, index) => {
 					node === sidePanelNodes[activeSection] && activeSection !== 0
@@ -133,7 +131,7 @@ const StoryNavPanelContainer = ({
 StoryNavPanelContainer.propTypes = {
 	className: PropTypes.string,
 	activeSection: PropTypes.number,
-	jumpSection: PropTypes.func,
+	setJumpSection: PropTypes.func,
 	sidePanelRef: PropTypes.object,
 	isOverflown: PropTypes.func,
 	contentSize: PropTypes.number,

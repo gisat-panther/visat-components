@@ -14,6 +14,7 @@ const StorySidePanel = ({
 	panelLayout,
 	theme,
 	activeSection,
+	activeStep,
 	setJumpSection,
 	contentSize,
 	hideNavigation,
@@ -23,10 +24,28 @@ const StorySidePanel = ({
 		setSidePanelRef(sidePanelRef);
 	}, []);
 
+	useEffect(() => {
+		let sidePanelNodes = Array.from(sidePanelRef.current.childNodes);
+		if (activeStep !== activeSection) {
+			if (activeStep === -1) {
+				sidePanelRef?.current?.scrollTo({
+					top: sidePanelNodes[sidePanelNodes.length - 1].offsetTop,
+				}),
+					setJumpSection(sidePanelNodes.length - 1);
+			} else {
+				sidePanelRef?.current?.scrollTo({
+					top: sidePanelNodes[activeStep].offsetTop,
+				}),
+					setJumpSection(activeStep);
+			}
+		}
+	}, [activeStep]);
+
+	const sidePanelRef = useRef();
+
 	const classes = name => {
 		return classnames(name, {}, 'is-' + panelLayout + '-layout', className);
 	};
-	const sidePanelRef = useRef();
 
 	return (
 		<div className={classes('ptr-StorySidePanel-container')}>
@@ -73,6 +92,7 @@ StorySidePanel.propTypes = {
 	theme: PropTypes.string,
 	hideNavigation: PropTypes.bool,
 	navigationIcons: PropTypes.object,
+	activeStep: PropTypes.number,
 };
 
 export default StorySidePanel;

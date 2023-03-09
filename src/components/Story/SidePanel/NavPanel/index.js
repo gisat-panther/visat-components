@@ -16,16 +16,13 @@ const StoryNavPanel = ({
 	navigationIcons,
 }) => {
 	const classes = classnames('ptr-StoryNavPanel', {}, layout, className);
-	const jumpSection = section => {
-		setJumpSection(section);
-	};
 
 	return (
 		<div className={classes}>
 			<StoryNavPanelContainer
 				className={''}
 				activeSection={activeSection}
-				jumpSection={jumpSection}
+				setJumpSection={setJumpSection}
 				sidePanelRef={sidePanelRef}
 				contentSize={contentSize}
 				theme={theme}
