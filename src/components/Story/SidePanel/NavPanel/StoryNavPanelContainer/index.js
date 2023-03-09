@@ -9,7 +9,7 @@ import './style.scss';
 const StoryNavPanelContainer = ({
 	className,
 	activeSection,
-	jumpSection,
+	setJumpSection,
 	sidePanelRef,
 	contentSize,
 	theme,
@@ -77,7 +77,7 @@ const StoryNavPanelContainer = ({
 						? (sidePanelRef?.current?.scrollTo({
 								top: sidePanelNodes[index].offsetTop,
 						  }),
-						  jumpSection(index))
+						  setJumpSection(index))
 						: null;
 				});
 			case 'up':
@@ -128,11 +128,10 @@ const StoryNavPanelContainer = ({
 		</div>
 	);
 };
-
 StoryNavPanelContainer.propTypes = {
 	className: PropTypes.string,
 	activeSection: PropTypes.number,
-	jumpSection: PropTypes.func,
+	setJumpSection: PropTypes.func,
 	sidePanelRef: PropTypes.object,
 	isOverflown: PropTypes.func,
 	contentSize: PropTypes.number,
