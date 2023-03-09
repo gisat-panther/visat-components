@@ -1,3 +1,16 @@
+# v0.17.0 (Thu Mar 09 2023)
+
+#### 🚀 Enhancement
+
+- Feature/story external nav [#33](https://github.com/gisat-panther/visat-components/pull/33) ([@vlach1989](https://github.com/vlach1989) [@KrystofVavra](https://github.com/KrystofVavra))
+
+#### Authors: 2
+
+- Kryštof ([@KrystofVavra](https://github.com/KrystofVavra))
+- Pavel Vlach ([@vlach1989](https://github.com/vlach1989))
+
+---
+
 # v0.16.0 (Tue Jan 03 2023)
 
 #### 🚀 Enhancement
