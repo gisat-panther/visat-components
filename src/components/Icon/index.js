@@ -52,8 +52,8 @@ import {
 import {AiFillHome as Home} from 'react-icons/ai';
 import {BiWater as Water} from 'react-icons/bi';
 import {
-	GoPrimitiveDot as Dot,
-	GoPrimitiveSquare as Square,
+	GoDotFill as Dot,
+	GoSquare as Square,
 	GoTools as Tools,
 } from 'react-icons/go';
 import {HiCursorClick as Selection} from 'react-icons/hi';
