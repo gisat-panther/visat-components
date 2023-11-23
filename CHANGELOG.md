@@ -1,3 +1,15 @@
+# v0.17.1 (Thu Nov 23 2023)
+
+#### 🐾 Patch
+
+- Update packages [#34](https://github.com/gisat-panther/visat-components/pull/34) ([@vdubr](https://github.com/vdubr))
+
+#### Authors: 1
+
+- Vojtěch Dubrovský ([@vdubr](https://github.com/vdubr))
+
+---
+
 # v0.17.0 (Thu Mar 09 2023)
 
 #### 🚀 Enhancement
